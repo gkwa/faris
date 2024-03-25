@@ -1,2 +1,7 @@
----
-# tasks file for elasticsearch_ubuntu
+- name: ensure file exists
+  run_once: true
+  delegate_to: localhost
+  ansible.builtin.copy:
+    content: ""
+    dest: /tmp/ensure_file_exists.txt
+    force: no

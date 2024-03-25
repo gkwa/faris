@@ -2,3 +2,10 @@
 - name: Task is running from within the role
   ansible.builtin.debug:
     msg: "This is a task from my_role."
+
+- name: ensure file exists
+  ansible.builtin.copy:
+    content: ""
+    dest: /tmp/ensure_file_exists.txt
+    force: no
+  run_once: true
